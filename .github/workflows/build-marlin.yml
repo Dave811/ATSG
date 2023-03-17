@@ -180,6 +180,13 @@ jobs:
           cd release
           zip -r AT-GP-fil-lev.zip AT-GP-fil-lev/
       # ------------------- Upload Release -------------------
+      # checkout the repo
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: repo
       - name: Upload zip file
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -187,4 +194,4 @@ jobs:
           files: |
             release/AT-SW-fil-lev.zip
             release/AT-GP-fil-lev.zip
-          body_path: CREDITS.md
+          body_path: repo/CREDITS.md
