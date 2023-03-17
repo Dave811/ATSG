@@ -187,4 +187,4 @@ jobs:
           files: |
             release/AT-SW-fil-lev.zip
             release/AT-GP-fil-lev.zip
-          body_path: ${{ github.workspace }}/CREDITS.md
+          body_path: CREDITS.md
