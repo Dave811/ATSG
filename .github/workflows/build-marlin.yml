@@ -1,4 +1,6 @@
 name: build-marlin
+permissions:
+  contents: write
 # trigger on tag push
 on:
   push:
