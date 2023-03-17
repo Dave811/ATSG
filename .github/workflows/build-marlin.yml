@@ -1,0 +1,190 @@
+name: build-marlin
+# trigger on tag push
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  build:
+    name: Build Artillery_Ruby
+    runs-on: ubuntu-latest
+    steps:
+      # ------------------- Prepare -------------------
+      # Clone the Marlin repo from freakydude
+      - name: Check out the PR
+        uses: actions/checkout@v3
+        with:
+          repository: freakydude/Marlin
+          # 17.10.2021 - 279a463b4088492d3a6b2b785609235e0ac7938d
+          ref: "279a463b4088492d3a6b2b785609235e0ac7938d"
+          path: freakydude-Marlin
+          token: ${{ secrets.DUMMY_TOKEN }}
+      # Cache pip and PlatformIO
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: freakydude-Marlin/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Cache PlatformIO
+        uses: actions/cache@v3
+        with:
+          path: freakydude-Marlin/.platformio
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+      # Install Python 3.7 and PlatformIO
+      - name: Select Python 3.7
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.7" # Version range or exact version of a Python version to use, using semvers version range syntax.
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
+
+      # Clone the BigTreeTech TouchScreen repo
+      - name: Check out BigTreeTech-Touchscreen
+        uses: actions/checkout@v3
+        with:
+          repository: MirakelPrints/BIGTREETECH-TouchScreenFirmware
+          # 17.10.2021 - 279a463b4088492d3a6b2b785609235e0ac7938d
+          ref: "4c1f5e084cf9ad6433fafc154832a68220006c15"
+          path: BigTreeTech-Touchscreen
+          token: ${{ secrets.DUMMY_TOKEN }}
+      # Cache pip and PlatformIO
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: BigTreeTech-Touchscreen/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+      - name: Cache PlatformIO
+        uses: actions/cache@v3
+        with:
+          path: BigTreeTech-Touchscreen/.platformio
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+      # Setup Python and PlatformIO
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+      - name: Install PlatformIO
+        run: |
+          pip install -U platformio
+          pio upgrade --dev
+          pio pkg update --global
+          
+      # ------------------- Build Marlin -------------------
+      # ------------------- AT-SW-fil-lev -------------------
+      # Build the AT-SW-fil-lev-Marlin firmware
+      - name: Build Artillery Ruby
+        run: |
+          ls
+          cd freakydude-Marlin
+          ls
+          platformio run --environment Artillery_Ruby
+      # Upload the firmware artifact
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: AT-SW-fil-lev-Marlin
+          path: freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin
+      # ------------------- AT-GP-fil-lev -------------------
+      # change #define X_BED_SIZE and Y_BED_SIZE  to 220
+      - name: Change X_BED_SIZE and Y_BED_SIZE from 300 to 220 in Configuration.h
+        run: |
+          cd freakydude-Marlin
+          sed -i 's/#define X_BED_SIZE 300/#define X_BED_SIZE 220/g' Marlin/src/inc/Conditionals_post.h
+          sed -i 's/#define Y_BED_SIZE 300/#define Y_BED_SIZE 220/g' Marlin/src/inc/Conditionals_post.h
+      # Build the AT-GP-fil-lev-Marlin firmware
+      - name: Build Artillery Ruby
+        run: |
+          cd freakydude-Marlin
+          platformio run --environment Artillery_Ruby
+      # Upload the firmware artifact
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: AT-GP-fil-lev-Marlin
+          path: freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin
+      # TODO add other Marlin configs and firmware
+
+      # ------------------- Build Display -------------------
+      # ------------------- AT-SW-fil-lev -------------------
+      # change size_max:X220 Y220 Z250 in cd mkstft28evo/config.ini to size_max:X300 Y300 Z400
+      - name: Change size_max to 300
+        run: |
+          cd BigTreeTech-Touchscreen
+          sed -i 's/size_max:X220 Y220 Z250/size_max:X300 Y300 Z400/g' mkstft28evo/config.ini
+      # Build the AT-SW-fil-lev-MKS_GD_TFT28_V4_0 firmware
+      - name: Build BigTreeTech TouchScreen
+        run: |
+          cd BigTreeTech-Touchscreen
+          platformio run --environment MKS_GD_TFT28_V4_0
+      # Upload the display firmware artifact
+      - name: Upload display firmware artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: AT-SW-fil-lev-MKS_GD_TFT28_V4_0
+          path: BigTreeTech-Touchscreen/mkstft28evo/
+      # ------------------- AT-GP-fil-lev -------------------
+      # change size_max:x300 y300 z400 in cd mkstft28evo/config.ini to size_max:x220 y220 z250
+      - name: Change size_max to 220
+        run: |
+          cd BigTreeTech-Touchscreen
+          sed -i 's/size_max:X300 Y300 Z400/size_max:X220 Y220 Z250/g' mkstft28evo/config.ini
+      # Build the AT-GP-fil-lev-MKS_GD_TFT28_V4_0 firmware
+      - name: Build BigTreeTech TouchScreen
+        run: |
+          cd BigTreeTech-Touchscreen
+          platformio run --environment MKS_GD_TFT28_V4_0
+      # Upload the display firmware artifact
+      - name: Upload display firmware artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: AT-GP-fil-lev-MKS_GD_TFT28_V4_0
+          path: BigTreeTech-Touchscreen/mkstft28evo/
+      # TODO add other display configs and firmware
+
+      # ------------------- Prepare Release -------------------
+      # Download the marlin and display firmware artifacts
+      # ------------------- AT-SW-fil-lev -------------------
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: AT-SW-fil-lev-Marlin
+          path: release/AT-SW-fil-lev/Marlin
+      - name: Download display firmware artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: AT-SW-fil-lev-MKS_GD_TFT28_V4_0
+          path: release/AT-SW-fil-lev/display
+      # ------------------- AT-GP-fil-lev -------------------
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: AT-GP-fil-lev-Marlin
+          path: release/AT-GP-fil-lev/Marlin
+      - name: Download display firmware artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: AT-GP-fil-lev-MKS_GD_TFT28_V4_0
+          path: release/AT-GP-fil-lev/display
+      # ------------------- Zip Release -------------------
+      # create zip file
+      # ------------------- AT-SW-fil-lev -------------------
+      - name: Create zip file
+        run: |
+          cd release
+          zip -r AT-SW-fil-lev.zip AT-SW-fil-lev/
+      # ------------------- AT-GP-fil-lev -------------------
+      - name: Create zip file
+        run: |
+          cd release
+          zip -r AT-GP-fil-lev.zip AT-GP-fil-lev/
+      # ------------------- Upload Release -------------------
+      - name: Upload zip file
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            release/AT-SW-fil-lev.zip
+            release/AT-GP-fil-lev.zip
+          body_path: ${{ github.workspace }}/CREDITS.md
