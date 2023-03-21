@@ -72,7 +72,15 @@ jobs:
           pip install -U platformio
           pio upgrade --dev
           pio pkg update --global
-          
+
+      # checkout the release repo
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: repo
+
       # ------------------- Build Marlin -------------------
       # ------------------- AT-SW-fil-lev -------------------
       # Build the AT-SW-fil-lev-Marlin firmware
@@ -82,12 +90,11 @@ jobs:
           cd freakydude-Marlin
           ls
           platformio run --environment Artillery_Ruby
-      # Upload the firmware artifact
-      - name: Upload firmware artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: AT-SW-fil-lev-Marlin
-          path: freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin
+      # Move the firmware to the release folder
+      - name: Move firmware to release folder
+        run: |
+          mkdir -p release/AT-SW-fil-lev/Marlin
+          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-SW-fil-lev/firmware.bin
       # ------------------- AT-GP-fil-lev -------------------
       # change #define X_BED_SIZE and Y_BED_SIZE  to 220
       - name: Change X_BED_SIZE and Y_BED_SIZE from 300 to 220 in Configuration.h
@@ -100,16 +107,20 @@ jobs:
         run: |
           cd freakydude-Marlin
           platformio run --environment Artillery_Ruby
-      # Upload the firmware artifact
-      - name: Upload firmware artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: AT-GP-fil-lev-Marlin
-          path: freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin
+      # Move the firmware to the release folder
+      - name: Move firmware to release folder
+        run: |
+          mkdir -p release/AT-GP-fil-lev/Marlin
+          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/firmware.bin
       # TODO add other Marlin configs and firmware
 
       # ------------------- Build Display -------------------
       # ------------------- AT-SW-fil-lev -------------------
+      # copy and override the config.ini from the repo/config/TFT folder to the BigTreeTech-Touchscreen/mkstft28evo folder
+      - name: Copy config.ini from repo/config/TFT to BigTreeTech-Touchscreen/mkstft28evo
+        run: |
+          rm BigTreeTech-Touchscreen/mkstft28evo/config.ini
+          cp repo/config/TFT/config.ini BigTreeTech-Touchscreen/mkstft28evo/config.ini
       # change size_max:X220 Y220 Z250 in cd mkstft28evo/config.ini to size_max:X300 Y300 Z400
       - name: Change size_max to 300
         run: |
@@ -120,12 +131,11 @@ jobs:
         run: |
           cd BigTreeTech-Touchscreen
           platformio run --environment MKS_GD_TFT28_V4_0
-      # Upload the display firmware artifact
-      - name: Upload display firmware artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: AT-SW-fil-lev-MKS_GD_TFT28_V4_0
-          path: BigTreeTech-Touchscreen/mkstft28evo/
+      # Move the display firmware to the release folder
+      - name: Move display firmware to release folder
+        run: |
+          mkdir -p release/AT-SW-fil-lev/TFT
+          cp -r BigTreeTech-Touchscreen/mkstft28evo/* release/AT-SW-fil-lev/TFT/
       # ------------------- AT-GP-fil-lev -------------------
       # change size_max:x300 y300 z400 in cd mkstft28evo/config.ini to size_max:x220 y220 z250
       - name: Change size_max to 220
@@ -137,38 +147,12 @@ jobs:
         run: |
           cd BigTreeTech-Touchscreen
           platformio run --environment MKS_GD_TFT28_V4_0
-      # Upload the display firmware artifact
-      - name: Upload display firmware artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: AT-GP-fil-lev-MKS_GD_TFT28_V4_0
-          path: BigTreeTech-Touchscreen/mkstft28evo/
+      # Move the display firmware to the release folder
+      - name: Move display firmware to release folder
+        run: |
+          mkdir -p release/AT-GP-fil-lev/TFT
+          cp -r BigTreeTech-Touchscreen/mkstft28evo/* release/AT-GP-fil-lev/TFT/
       # TODO add other display configs and firmware
-
-      # ------------------- Prepare Release -------------------
-      # Download the marlin and display firmware artifacts
-      # ------------------- AT-SW-fil-lev -------------------
-      - name: Download firmware artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: AT-SW-fil-lev-Marlin
-          path: release/AT-SW-fil-lev/Marlin
-      - name: Download display firmware artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: AT-SW-fil-lev-MKS_GD_TFT28_V4_0
-          path: release/AT-SW-fil-lev/display
-      # ------------------- AT-GP-fil-lev -------------------
-      - name: Download firmware artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: AT-GP-fil-lev-Marlin
-          path: release/AT-GP-fil-lev/Marlin
-      - name: Download display firmware artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: AT-GP-fil-lev-MKS_GD_TFT28_V4_0
-          path: release/AT-GP-fil-lev/display
       # ------------------- Zip Release -------------------
       # create zip file
       # ------------------- AT-SW-fil-lev -------------------
@@ -181,14 +165,18 @@ jobs:
         run: |
           cd release
           zip -r AT-GP-fil-lev.zip AT-GP-fil-lev/
-      # ------------------- Upload Release -------------------
-      # checkout the repo
-      - name: Checkout
-        uses: actions/checkout@v3
+      # ------------------- Upload Release to artifact -------------------
+      - name: Upload AT-SW-fil-lev
+        uses: actions/upload-artifact@v2
         with:
-          ref: ${{ github.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: repo
+          name: AT-SW-fil-lev
+          path: release/AT-SW-fil-lev.zip
+      - name: AT-GP-fil-lev
+        uses: actions/upload-artifact@v2
+        with:
+          name: AT-GP-fil-lev
+          path: release/AT-GP-fil-lev.zip
+      # ------------------- Upload Release -------------------
       - name: Upload zip file
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
