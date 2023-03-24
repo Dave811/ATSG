@@ -10,3 +10,4 @@
 | MKS_GD_TFT28_V4_0 | Artillery | Genius Pro | yes             | no          | TODO AT-GP-fil.zip                                                                              |                           |
 | MKS_GD_TFT28_V4_0 | Artillery | Genius Pro | no              | yes         | TODO AT-GP-lev.zip                                                                              |                           |
 | MKS_GD_TFT28_V4_0 | Artillery | Genius Pro | no              | no          | TODO AT-GP.zip                                                                                  |                           |
+| Display Combo     |           |            |                 |             | [Display Combo](https://github.com/Dave811/ATSG/releases/latest/download/DisplayCombo.zip)      | no MKS_GD_TFT28_V4_0      |

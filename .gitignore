@@ -1,1 +1,4 @@
 .secrets
+
+hugo.exe
+.hugo_build.lock

@@ -72,6 +72,15 @@ jobs:
           pip install -U platformio
           pio upgrade --dev
           pio pkg update --global
+      # Clone bigtreetech TFT repo
+      - name: Check out BigTreeTech-TFT
+        uses: actions/checkout@v3
+        with:
+          repository: bigtreetech/BIGTREETECH-TouchScreenFirmware
+          # 24.03.2023 - 60df3ef585757592c7686c7aa249750d314ae19a
+          ref: "60df3ef585757592c7686c7aa249750d314ae19a"
+          path: BigTreeTech-TFT-OLD
+          token: ${{ secrets.DUMMY_TOKEN }}
 
       # checkout the release repo
       - name: Checkout
@@ -113,7 +122,6 @@ jobs:
           mkdir -p release/AT-GP-fil-lev/Marlin
           cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/firmware.bin
       # TODO add other Marlin configs and firmware
-
       # ------------------- Build Display -------------------
       # ------------------- AT-SW-fil-lev -------------------
       # copy and override the config.ini from the repo/config/TFT folder to the BigTreeTech-Touchscreen/mkstft28evo folder
@@ -152,19 +160,62 @@ jobs:
         run: |
           mkdir -p release/AT-GP-fil-lev/TFT
           cp -r BigTreeTech-Touchscreen/mkstft28evo/* release/AT-GP-fil-lev/TFT/
+      # ------------------- Display Combo -------------------
+      # use MKS_TFT28_NEW_GENIUS.27.x.bin from bigtreetech firmware old repo from the "Copy to SD Card root directory to update" folder to release and rename to MKSTFT28.bin, copy SW config from release/AT-SW-fil-lev/TFT to release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin
+      # copy the bmp and font folder from the "BigTreeTech-TFT-OLD/Copy to SD Card root directory to update/THEME_Unified Menu Material theme/TFT28" folder to "release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin/TFT28"
+      - name: Copy MKS_TFT28_NEW_GENIUS.27.x.bin to release folder
+        run: |
+          mkdir -p release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin
+          cp BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/MKS_TFT28_NEW_GENIUS.27.x.bin release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin/MKSTFT28.bin
+          cp release/AT-SW-fil-lev/TFT/config.ini release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin/config.ini
+          cp -r BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/THEME_Unified\ Menu\ Material\ theme/TFT28 release/DisplayCombo/SW/01-MKS_TFT28_NEW_GENIUS.27.x.bin/TFT28
+      # use MKS_TFT28_V3.0.27.x.bin from bigtreetech firmware old repo from the "Copy to SD Card root directory to update" folder to release and rename to MKSTFT28.bin, copy SW config from release/AT-SW-fil-lev/TFT to release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin
+      # copy the bmp and font folder from the "BigTreeTech-TFT-OLD/Copy to SD Card root directory to update/THEME_Unified Menu Material theme/TFT28" folder to "release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin/TFT28"
+      - name: Copy MKS_TFT28_V3.0.27.x.bin to release folder
+        run: |
+          mkdir -p release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin
+          cp BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/MKS_TFT28_V3.0.27.x.bin release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin/MKSTFT28.bin
+          cp release/AT-SW-fil-lev/TFT/config.ini release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin/config.ini
+          cp -r BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/THEME_Unified\ Menu\ Material\ theme/TFT28 release/DisplayCombo/SW/02-MKS_TFT28_V3.0.27.x.bin/TFT28
+      # use MKS_TFT28_V4.0.27.x.bin from bigtreetech firmware old repo from the "Copy to SD Card root directory to update" folder to release and rename to MKSTFT28.bin, copy SW config from release/AT-SW-fil-lev/TFT to release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin
+      # copy the bmp and font folder from the "BigTreeTech-TFT-OLD/Copy to SD Card root directory to update/THEME_Unified Menu Material theme/TFT28" folder to "release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin/TFT28"
+      - name: Copy MKS_TFT28_V4.0.27.x.bin to release folder
+        run: |
+          mkdir -p release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin
+          cp BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/MKS_TFT28_V4.0.27.x.bin release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin/MKSTFT28.bin
+          cp release/AT-SW-fil-lev/TFT/config.ini release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin/config.ini
+          cp -r BigTreeTech-TFT-OLD/Copy\ to\ SD\ Card\ root\ directory\ to\ update/THEME_Unified\ Menu\ Material\ theme/TFT28 release/DisplayCombo/SW/03-MKS_TFT28_V4.0.27.x.bin/TFT28
+
+      # copy the SW folder to GP folder
+      - name: Copy SW folder to GP folder
+        run: |
+          cp -r release/DisplayCombo/SW release/DisplayCombo/GP
+      # copy and replace the config.ini from release/AT-GP-fil-lev/TFT to release/DisplayCombo/GP/01-MKS_TFT28_NEW_GENIUS.27.x.bin and release/DisplayCombo/GP/02-MKS_TFT28_V3.0.27.x.bin and release/DisplayCombo/GP/03-MKS_TFT28_V4.0.27.x.bin
+      - name: Copy and replace config.ini to GP folder
+        run: |
+          cp release/AT-GP-fil-lev/TFT/config.ini release/DisplayCombo/GP/01-MKS_TFT28_NEW_GENIUS.27.x.bin/config.ini
+          cp release/AT-GP-fil-lev/TFT/config.ini release/DisplayCombo/GP/02-MKS_TFT28_V3.0.27.x.bin/config.ini
+          cp release/AT-GP-fil-lev/TFT/config.ini release/DisplayCombo/GP/03-MKS_TFT28_V4.0.27.x.bin/config.ini
       # TODO add other display configs and firmware
       # ------------------- Zip Release -------------------
       # create zip file
       # ------------------- AT-SW-fil-lev -------------------
-      - name: Create zip file
+      - name: Create zip file max compression
         run: |
           cd release
-          zip -r AT-SW-fil-lev.zip AT-SW-fil-lev/
+          zip -r -9 AT-SW-fil-lev.zip AT-SW-fil-lev/
       # ------------------- AT-GP-fil-lev -------------------
-      - name: Create zip file
+      - name: Create zip file max compression
         run: |
           cd release
-          zip -r AT-GP-fil-lev.zip AT-GP-fil-lev/
+          zip -r -9 AT-GP-fil-lev.zip AT-GP-fil-lev/
+
+      # ------------------- Display Combo -------------------
+      # create zip file
+      - name: Create zip file max compression
+        run: |
+          cd release
+          zip -r -9 DisplayCombo.zip DisplayCombo/
       # ------------------- Upload Release to artifact -------------------
       - name: Upload AT-SW-fil-lev
         uses: actions/upload-artifact@v2
@@ -176,6 +227,11 @@ jobs:
         with:
           name: AT-GP-fil-lev
           path: release/AT-GP-fil-lev.zip
+      - name: DisplayCombo
+        uses: actions/upload-artifact@v2
+        with:
+          name: DisplayCombo
+          path: release/DisplayCombo.zip
       # ------------------- Upload Release -------------------
       - name: Upload zip file
         uses: softprops/action-gh-release@v1
@@ -184,4 +240,5 @@ jobs:
           files: |
             release/AT-SW-fil-lev.zip
             release/AT-GP-fil-lev.zip
+            release/DisplayCombo.zip
           body_path: repo/CREDITS.md
