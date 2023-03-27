@@ -1,0 +1,11 @@
+#Search {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#Search_Item {
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+}
