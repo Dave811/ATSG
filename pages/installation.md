@@ -2,7 +2,7 @@
 title: Installation
 layout: home
 nav_order: 3
-permalink: /
+permalink: /install
 ---
 
 # Requirements
