@@ -95,15 +95,13 @@ jobs:
       # Build the AT-SW-fil-lev-Marlin firmware
       - name: Build Artillery Ruby
         run: |
-          ls
           cd freakydude-Marlin
-          ls
           platformio run --environment Artillery_Ruby
       # Move the firmware to the release folder
       - name: Move firmware to release folder
         run: |
           mkdir -p release/AT-SW-fil-lev/Marlin
-          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-SW-fil-lev/firmware.bin
+          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-SW-fil-lev/Marlin/firmware.bin
       # ------------------- AT-GP-fil-lev -------------------
       # change #define X_BED_SIZE and Y_BED_SIZE  to 220
       - name: Change X_BED_SIZE and Y_BED_SIZE from 300 to 220 in Configuration.h
@@ -120,7 +118,7 @@ jobs:
       - name: Move firmware to release folder
         run: |
           mkdir -p release/AT-GP-fil-lev/Marlin
-          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/firmware.bin
+          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-GP-fil-lev/Marlin/firmware.bin
       # TODO add other Marlin configs and firmware
       # ------------------- Build Display -------------------
       # ------------------- AT-SW-fil-lev -------------------
