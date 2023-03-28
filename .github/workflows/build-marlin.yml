@@ -112,6 +112,7 @@ jobs:
           sed -i 's/#define X_BED_SIZE 300/#define X_BED_SIZE 220/g' Marlin/Configuration.h
           sed -i 's/#define Y_BED_SIZE 300/#define Y_BED_SIZE 220/g' Marlin/Configuration.h
           sed -i 's/#define Z_MAX_POS 400/#define Z_MAX_POS 250/g' Marlin/Configuration.h
+          sed -i 's/#define CUSTOM_MACHINE_NAME "Sidewinder X2"/#define CUSTOM_MACHINE_NAME "Genius Pro"/g' Marlin/Configuration.h
 
       # Build the AT-GP-fil-lev-Marlin firmware
       - name: Build Artillery Ruby
