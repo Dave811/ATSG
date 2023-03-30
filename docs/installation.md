@@ -1,11 +1,10 @@
 ---
-title: Installation
 layout: home
 nav_order: 3
 permalink: /install
 ---
-
-# Requirements
+# Installation
+## Requirements
 - For now an: 
   - Artillery SidewinderX1/2 with Bed level sensor
   - Artillery Genius(Pro) with Bed level sensor
@@ -15,15 +14,15 @@ permalink: /install
     - if not then you need to reformat the SD-Card or try a new one!
 - Computer
 
-# Prepare
+## Prepare
 - Download the correct files from [Downloads]({% link pages/download.html %}#aux-links)
   - For that use the filters above the table
   - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
 - After you downloaded the files unpack them
 - To flash Marlin later on, you need this software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
-<hr>
-# TFT
-## If you know which TFT variant you have choose the correct Folder that contains:
+---
+## TFT
+### If you know which TFT variant you have choose the correct Folder that contains:
 - Older TFT
   - Folder:TFT28
   - config.ini
@@ -45,7 +44,7 @@ permalink: /install
 - You should see "Updating..." in the Display
   - If your display finishes updating you are finished with the display (TODO)
 
-## If you don't know which TFT variant you have:
+### If you don't know which TFT variant you have:
 
 - Download the DisplayCombo.zip and the variant (ex. Sidewinder or GeniusPro)
 - Unzip both zips
@@ -68,8 +67,8 @@ permalink: /install
 - If the display boots straight to the Display menu you need to try the same process with another folder
 - If you tested all 4 variants and it still din't work reach out here to get help [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
     
-<hr>
-# Marlin
+---
+## Marlin
 - Install the STM32CubeProgrammer software and open it
 - Connect your 3d Printer to your PC
 - Now you need to send M997 to the printer
@@ -88,15 +87,15 @@ permalink: /install
 - Finally disconnect the printer and turn it off!
 - If something went wrong reach out here [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
-# Congratulations you are all set :)
+## Congratulations you are all set :)
 
-# Images
+## Images
 
-![printer01](assets/images/guide/STM32/printer01.png)
-![printer02](assets/images/guide/STM32/printer02.png)
-![printer03](assets/images/guide/STM32/printer03.png)
-![printer04](assets/images/guide/STM32/printer04.png)
-![printer05](assets/images/guide/STM32/printer05.png)
-![printer06](assets/images/guide/STM32/printer06.png)
-![printer07](assets/images/guide/STM32/printer07.png)
-![printer08](assets/images/guide/STM32/printer08.png)
+![printer01](pathname://assets/installation/STM32/printer01.png)
+![printer02](pathname://assets/installation/STM32/printer02.png)
+![printer03](pathname://assets/installation/STM32/printer03.png)
+![printer04](pathname://assets/installation/STM32/printer04.png)
+![printer05](pathname://assets/installation/STM32/printer05.png)
+![printer06](pathname://assets/installation/STM32/printer06.png)
+![printer07](pathname://assets/installation/STM32/printer07.png)
+![printer08](pathname://assets/installation/STM32/printer08.png)
