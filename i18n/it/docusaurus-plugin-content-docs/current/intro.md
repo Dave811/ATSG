@@ -4,4 +4,4 @@ slug: /
 ---
 
 # Home
-Here you can find at the moment the [download page](./downloads) and the [installation page](./installation).
+Qui potete trovare, per il momento, [pagina di download](./downloads) e la  [pagina di installazione](./installation).
