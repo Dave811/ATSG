@@ -43,7 +43,7 @@ permalink: /installa
 - s la stampante è spenta
   - accendila e la procedura inizierà
 - Vedrai una scritta "Updating..." sul Display
-  - Alla fine dell'installazione leggera la scritta "Complete"
+  - Se il Display si sta aggiornando leggerai "Updating..." sul Display
 
 ### Se non conosci quale sia il modello del tuo TFT
 
