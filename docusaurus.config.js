@@ -29,7 +29,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de', 'it'],
   },
 
   presets: [
@@ -60,6 +60,13 @@ const config = {
       //image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'ATSG',
+        items: [
+          // ...
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+        ],
         // logo: {
         //   alt: 'ATSG Logo',
         //   // TODO: Replace with your project's logo
