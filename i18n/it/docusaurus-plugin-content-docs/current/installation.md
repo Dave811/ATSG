@@ -1,23 +1,23 @@
 ---
 layout: home
 nav_order: 3
-permalink: /install
+permalink: /installa
 ---
 
-# Installation
-## Requirements
-- For now an:
-  - Artillery SidewinderX1/2 with Bed level sensor
-  - Artillery Genius(Pro) with Bed level sensor
+# Installazione
+## Cosa ti serve:
+- Per ora :
+  - Artillery Sidewinder X1 o X2 con sensore di livellamento del piatto
+  - Artilllery Genius o Genius Pro con sensore di livellamento del piatto
 - SD-Card
-  - Fat32 formatted
-  - The SD-Card should work if you can see the content from the SD-Card in your 3d Printer, so the best option is to go to (TODO) Print -> switch from USB to SD if needed -> open the SD-Card -> you should see files
-    - if not then you need to reformat the SD-Card or try a new one!
+  - Formattala a FAT32 (formato di Windows)
+  - Se la SD-Card funzionerà, dovresti essere in grado di leggerne il contenuto (se non è vuota) direttamente dalla stampante. Per poter leggere la SD-Card devi andare neldisplay della stampante e selezionare, dall'apposito menù, la voce Micro SD, se vedrai dei file,significherà che il formato è quello giusto.
+    - Altrimenti dovrai procedere a riformattare la SD-Card
 - Computer
 
-## Prepare
-- Download the correct files from [Downloads]({% link pages/download.html %}#aux-links)
-  - For that use the filters above the table
+## Preparativi
+- Scarica il giusto file da qui: [Downloads]({% link pages/download.html %}#aux-links)
+  - Per farlo utilizza uno o più filtri nella parte superiore
   - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
 - After you downloaded the files unpack them
 - To flash Marlin later on, you need this software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
