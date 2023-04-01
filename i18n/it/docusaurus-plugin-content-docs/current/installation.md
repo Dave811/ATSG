@@ -12,7 +12,7 @@ permalink: /installa
 - SD-Card
   - Formattala a FAT32 (formato di Windows)
   - Se la SD-Card funzionerà, dovresti essere in grado di leggerne il contenuto (se non è vuota) direttamente dalla stampante. Per poter leggere la SD-Card devi andare neldisplay della stampante e selezionare, dall'apposito menù, la voce Micro SD, se vedrai dei file,significherà che il formato è quello giusto.
-    - Altrimenti dovrai procedere a riformattare la SD-Card
+    - Altrimenti dovrai procedere a riformattare la SD-Card!
 - Computer
 
 ## Preparativi
@@ -23,7 +23,7 @@ permalink: /installa
 - In seguito, per cambiare il firmware Marlin ti servirà questo software  [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
 ---
 ## Tft
-### Se conosci l'esatto modello del tuo TFT dvi scegliere la cartella esatta che conterrà :
+### Se conosci l'esatto modello del tuo TFT dvi scegliere la cartella esatta che conterrà:
 - Vecchio TFT
   - Cartella TFT28
   - config.ini
@@ -43,18 +43,18 @@ permalink: /installa
 - s la stampante è spenta
   - accendila e la procedura inizierà
 - Vedrai una scritta "Updating..." sul Display
-  - Alla fine dell'installazione leggera la scritta "Complete"
+  - Se il Display si sta aggiornando leggerai "Updating..." sul Display
 
 ### Se non conosci quale sia il modello del tuo TFT
 
 - Scarica il DisplayCpmbo.zip e la variante a seconda della stampante (es. Sidewinder o GeniusPro)
 - Scompatta entrambi i files
 - Nel file DisplayCpmbi ci dovrebbero essere 3 cartelle numerate
-- A cominciare dalla prima metti
+- A cominciare dalla prima metti:
   - Cartella: TFT28
   - config.ini
   - mkstft28.bin
-- Una delle varianti conterrà i seguenti flles
+- Una delle varianti conterrà i seguenti flles:
   - Cartella: mks_font
   - Cartella: mks_pic
   - Cartella: TFT28
