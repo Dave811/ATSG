@@ -1,7 +1,6 @@
 ---
 layout: home
-nav_order: 3
-permalink: /install
+sidebar_position: 3
 ---
 # Installation
 ## Requirements
@@ -15,7 +14,7 @@ permalink: /install
 - Computer
 
 ## Prepare
-- Download the correct files from [Downloads]({% link pages/download.html %}#aux-links)
+- Download the correct files from [Downloads](downloads.mdx)
   - For that use the filters above the table
   - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
 - After you downloaded the files unpack them
