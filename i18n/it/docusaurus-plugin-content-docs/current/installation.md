@@ -1,7 +1,6 @@
 ---
 layout: home
-nav_order: 3
-permalink: /installa
+sidebar_position: 3
 ---
 
 # Installazione
@@ -16,7 +15,7 @@ permalink: /installa
 - Computer
 
 ## Preparativi
-- Scarica il giusto file da qui: [Downloads]({% link pages/download.html %}#aux-links)
+- Download the correct files from [Downloads](downloads.mdx)
   - Per farlo utilizza uno o più filtri nella parte superiore della tabella
   - Se non conosci quale sia il tuo Display (TFT) scarica anche il file DisplayCombo.zip
 - Dopo aver scaricato il file zip, scompattalo
