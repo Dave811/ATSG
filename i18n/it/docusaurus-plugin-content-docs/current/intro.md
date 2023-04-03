@@ -13,7 +13,7 @@ Come detto dopo molte ore di lavoro e l'aiuto della comunità possiamoora sostit
 
 Perciò dopo i diverosi ringraziamenti, vogliamo offrirvi un punto di riferimento per l'installazione del nuovo firmware per il display ed anche un Marlin 2.1.2 compilato ad hoc.
 
-**IMPORTANTE!!!  QUESTA MODIFICA LA FATE A VOSTRO RISCHIO E PERICOLO, I GESTORI DEL SITO, GLI SVILUPPATORI ED I COLLABORATORI NON RISPONDERANNO IN ALCUNA MANIERA AD EVENTUALI DANNI CHE LA VOSTRA STAMPANTE DOVESSE RIPORTARE!!!**
+**IMPORTANTE!!! QUESTA MODIFICA LA FATE A VOSTRO RISCHIO E PERICOLO, I GESTORI DEL SITO, GLI SVILUPPATORI ED I COLLABORATORI NON RISPONDERANNO IN ALCUNA MANIERA AD EVENTUALI DANNI CHE LA VOSTRA STAMPANTE DOVESSE RIPORTARE!!!**
 
 
 Puoi trovare [pagina di download](./downloads) e la  [pagina di installazione](./installation) nel sito
