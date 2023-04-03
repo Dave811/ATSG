@@ -3,9 +3,9 @@ sidebar_position: 1
 slug: /
 ---
 
-# Home
+# Casa
 
-After a lot of work, mainly done by **Gagipro**, **Ciotto** and **Fourmi**, the Community managed to port the Display firmware, originally conceived by BTT for their TFT with STM32 chip.
+Después de mucho trabajo, principalmente realizado por **Gagipro**, **Ciotto** and **Fourmi**, la comunidad logró portar el firmware de Display, originalmente concebido por BTT para su TFT con chip STM32.
 
 Initially the distribution of the Artillery printers, for the Sidewinder X2 and Genius Pro models, took place with TFTs based on the same chip, therefore a new firmware could be installed, different from the one supplied by the parent company which made it easier for the user to set up. Towards the middle of last year the Display chip was replaced with a GD32, which made it impossible to replace the stock firmware with the BTT one until yesterday.
 
