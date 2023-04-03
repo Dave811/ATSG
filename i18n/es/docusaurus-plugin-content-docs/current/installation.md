@@ -1,36 +1,36 @@
 ---
-layout: home
+layout: Casa
 sidebar_position: 3
 ---
 
-# Installation
-## Requirements
-- For now an:
-  - Artillery SidewinderX1/2 with Bed level sensor
-  - Artillery Genius(Pro) with Bed level sensor
-- SD-Card
-  - Fat32 formatted
-  - The SD-Card should work if you can see the content from the SD-Card in your 3d Printer, so the best option is to go to (TODO) Print -> switch from USB to SD if needed -> open the SD-Card -> you should see files
-    - if not then you need to reformat the SD-Card or try a new one!
-- Computer
+# Installación
+## Lo que necesita
+- Ahora :
+  - Una impresora Artillery  Sidewinder X1 o X2 con sensor de nivel de la cama
+  - Una impresora Artillery Genius o Genius Pro con sensor de nivel para la cama
+- Tarjeta Micro-SD
+  - Formateado por FAT32
+  - La tarjeta SD debería funcionar si puede ver el contenido de la tarjeta SD en su impresora 3D, por lo que la mejor opción es ir a (TODO) Imprimir -> cambiar de USB a SD si es necesario -> abrir la tarjeta SD -> deberías ver los archivos
+    - si no es así, ¡necesita volver a formatear la tarjeta SD o probar una nueva!
+- Computadora
 
-## Prepare
-- Download the correct files from [Downloads](downloads.mdx)
-  - For that use the filters above the table
-  - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
-- After you downloaded the files unpack them
-- To flash Marlin later on, you need this software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
+## Preparar
+- Descarga lo archivio corecto da   [Descargar](downloads.mdx)
+  - Por hacerlo utiliza los filtros sobra la mesa
+  - Si tu no sabe el modelo de tus Pantella (TFT), tu debe descargar el archivio DisplayCombo.zip
+- Después de haber descargado abre lo archivio
+- Para flashear Marlin más tarde, necesita este software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
 ---
 ## TFT
-### If you know which TFT variant you have choose the correct Folder that contains:
-- Older TFT
-  - Folder:TFT28
+### Si sabe qué variante de TFT tiene, elija la carpeta correcta que contiene:
+- Vieco TfT
+  - Carpeta TFT28
   - config.ini
   - mkstft28.bin
-- If you have the newest TFT
-  - Folder:mks_font
-  - Folder:mks_pic
-  - Folder:TFT28
+- Si tu tienes el nuevo TFT
+  - Carpeta:mks_font
+  - Carpeta:mks_pic
+  - Carpeta:TFT28
   - config.ini
   - mks_config.txt
   - mkstft28.bin
