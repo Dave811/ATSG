@@ -16,5 +16,6 @@ sidebar_position: 4
 - [Christian Bianciotto](https://github.com/ciotto) ¡por su trabajo de conversión!
 - [gagipro](https://github.com/gagipro) ¡por su trabajo de conversión!
 - [Fourmi](https://github.com/Fourmi) ¡por su trabajo de conversión!
+  - [Shop](https://www.hotends.fr)
 - [MirakelPrints](https://github.com/MirakelPrints) para empaquetar los archivos para descargar
   - [SRC](https://github.com/MirakelPrints/BIGTREETECH-TouchScreenFirmware)
