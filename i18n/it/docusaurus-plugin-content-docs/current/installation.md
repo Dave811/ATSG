@@ -15,13 +15,13 @@ sidebar_position: 3
 - Computer
 
 ## Preparativi
-- Download the correct files from [Downloads](downloads.mdx)
+- Scrica i file corretti dalla pagina [Downloads](downloads.mdx)
   - Per farlo utilizza uno o più filtri nella parte superiore della tabella
   - Se non conosci quale sia il tuo Display (TFT) scarica anche il file DisplayCombo.zip
 - Dopo aver scaricato il file zip, scompattalo
 - In seguito, per cambiare il firmware Marlin ti servirà questo software  [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
 ---
-## Tft
+## TfT
 ### Se conosci l'esatto modello del tuo TFT dvi scegliere la cartella esatta che conterrà:
 - Vecchio TFT
   - Cartella TFT28
