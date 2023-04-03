@@ -16,6 +16,6 @@ Por eso, después de muchas gracias, queremos ofrecerle un punto de referencia p
 **¡¡¡IMPORTANTE!!! USTED REALIZA ESTA MODIFICACIÓN BAJO SU PROPIO RIESGO, LOS ADMINISTRADORES DEL SITIO, LOS DESARROLLADORES Y LOS COLABORADORES NO SERÁN RESPONSABLES DE NINGÚN MODO POR LOS DAÑOS QUE SU IMPRESORA PUEDA SUFRIR!!**
 
 
-Puede buscar [página de descarga](./downloads) y la <a href="./installation>  página de instalación </a> en el sitio
+You can find the [download page](downloads.mdx) and the [installation page](installation.md) on the website.
 
 Más adelante encontrará guías de calibración y pasos posteriores a la instalación.
