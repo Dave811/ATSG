@@ -62,7 +62,7 @@ sidebar_position: 3
   - mkstft28.bin
   - mkstft28evo.bin
 - en una tarjeta SD que está formateada con Fat32
-- Si la pantalla se actualiza y puede ver "Updating..." en la pantalla
+- Si la pantalla se actualiza y puede ver "Updating..."
   - ¡Entonces sabrá qué variante de TFT tiene y debe anotarla o recordarla!
 - Si la pantalla se inicia directamente en el menú Pantalla, debe intentar el mismo proceso con otra carpeta
 - Si probó las 4 variantes y aún no funciona, comuníquese aquí para obtener ayuda  [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
