@@ -16,5 +16,6 @@ sidebar_position: 4
 - [Christian Bianciotto](https://github.com/ciotto) for the research and great work!
 - [gagipro](https://github.com/gagipro) for the research and great work!
 - [Fourmi](https://github.com/Fourmi) for the research and great work!
+  - [Shop](https://www.hotends.fr)
 - [MirakelPrints](https://github.com/MirakelPrints) for packaging the tft-firmware
   - [SRC](https://github.com/MirakelPrints/BIGTREETECH-TouchScreenFirmware)
