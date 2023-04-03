@@ -3,9 +3,9 @@ layout: home
 sidebar_position: 4
 ---
 
-# Credits
+# Ringraziamenti
 ## Marlin
-- [MarlinFirmware and their dev team](https://marlinfw.org/) for providing the ground Printer firmware
+- [MarlinFirmware and their dev team](https://marlinfw.org/) per aver fornito un grande firmware
   - [SRC](https://github.com/MarlinFirmware/Marlin)
 - [freakyDude](https://blog.freakydu.de/) for modifying the configs for Marlin
   - [SRC](https://github.com/freakydude/Marlin)
