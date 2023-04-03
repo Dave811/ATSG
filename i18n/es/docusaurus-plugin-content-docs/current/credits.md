@@ -1,5 +1,5 @@
 ---
-layout: Casa
+layout: home
 sidebar_position: 4
 ---
 
