@@ -16,5 +16,6 @@ sidebar_position: 4
 - [Christian Bianciotto](https://github.com/ciotto) per le sue ricerche ed un grande lavoro di compilazione
 - [gagipro](https://github.com/gagipro) per le sue ricerche ed un grande lavoro di compilazione
 - [Fourmi](https://github.com/Fourmi) per le sue ricerche ed un grande lavoro di compilazione
+  - [Shop](https://www.hotends.fr)
 - [MirakelPrints](https://github.com/MirakelPrints) per aver fornito il pacchetto del firmware
   - [SRC](https://github.com/MirakelPrints/BIGTREETECH-TouchScreenFirmware)

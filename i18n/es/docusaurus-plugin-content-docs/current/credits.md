@@ -3,18 +3,19 @@ layout: home
 sidebar_position: 4
 ---
 
-# Credits
+# Créditos
 ## Marlin
-- [MarlinFirmware and their dev team](https://marlinfw.org/) for providing the ground Printer firmware
+- [MarlinFirmware and their dev team](https://marlinfw.org/) por el firmware basico de la impesora
   - [SRC](https://github.com/MarlinFirmware/Marlin)
-- [freakyDude](https://blog.freakydu.de/) for modifying the configs for Marlin
+- [freakyDude](https://blog.freakydu.de/) por su trabajo para la configuración de el Marlin
   - [SRC](https://github.com/freakydude/Marlin)
 
 ## TFT-Firmware
-- [bigtreetech](https://bigtree-tech.com/de/) for providing a BIGTREETECH-TouchScreenFirmware
+- [bigtreetech](https://bigtree-tech.com/de/) por su firmware dela pantala tactil
   - [SRC](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware)
-- [Christian Bianciotto](https://github.com/ciotto) for the research and great work!
-- [gagipro](https://github.com/gagipro) for the research and great work!
-- [Fourmi](https://github.com/Fourmi) for the research and great work!
-- [MirakelPrints](https://github.com/MirakelPrints) for packaging the tft-firmware
+- [Christian Bianciotto](https://github.com/ciotto) ¡por su trabajo de conversión!
+- [gagipro](https://github.com/gagipro) ¡por su trabajo de conversión!
+- [Fourmi](https://github.com/Fourmi) ¡por su trabajo de conversión!
+  - [Shop](https://www.hotends.fr)
+- [MirakelPrints](https://github.com/MirakelPrints) para empaquetar los archivos para descargar
   - [SRC](https://github.com/MirakelPrints/BIGTREETECH-TouchScreenFirmware)

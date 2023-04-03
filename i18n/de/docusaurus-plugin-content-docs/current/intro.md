@@ -16,6 +16,6 @@ Therefore, after many thanks, we want to offer you a point of reference for inst
 **IMPORTANT!!! YOU MAKE THIS MODIFICATION AT YOUR OWN RISK, THE SITE MANAGERS, DEVELOPERS AND CONTRIBUTORS WILL NOT BE RESPONSIBLE IN ANY WAY FOR ANY DAMAGES THAT YOUR PRINTER MAY SUFFER!!!**
 
 
-You can find the [download page](./downloads) and the [installation page](./installation) on the website.
+You can find the [download page](downloads.mdx) and the [installation page](installation.md) on the website.
 
 Later on you will find calibration guides and after install steps.
