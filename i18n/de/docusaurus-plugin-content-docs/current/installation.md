@@ -15,79 +15,79 @@ sidebar_position: 3
 - Computer
 
 ## Vorbereiten
-- Download the correct files from [Downloads](downloads.mdx)
-  - For that use the filters above the table
-  - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
-- After you downloaded the files unpack them
-- To flash Marlin later on, you need this software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
+- Laden Sie die richtigen Dateien von herunter [Downloads](downloads.mdx)
+  - Verwenden Sie dazu die Filter über der Tabelle
+  - Wenn Sie nicht wissen, welches Display (TFT) Sie haben, laden Sie auch die DisplayCombo.zip herunter
+- Nachdem Sie die Dateien heruntergeladen haben, entpacken Sie sie
+- Um Marlin später zu flashen, benötigen Sie diese Software [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
 ---
 ## TFT
-### If you know which TFT variant you have choose the correct Folder that contains:
-- Older TFT
-  - Folder:TFT28
+### Wenn Sie wissen, welche TFT-Variante Sie haben, wählen Sie den richtigen Ordner, der Folgendes enthält:
+- Älteres TFT
+  - Ordner:TFT28
   - config.ini
   - mkstft28.bin
-- If you have the newest TFT
-  - Folder:mks_font
-  - Folder:mks_pic
-  - Folder:TFT28
-  - config.ini
-  - mks_config.txt
-  - mkstft28.bin
-  - mkstft28evo.bin
-- Then copy these files and folders to a SD-Card that is Fat32 formatted
-- Put the SD-Card in your 3d-printer
-- If the printer is online
-  - press the reset button next to the Display
-- If the printer is offline
-  - power on the printer
-- You should see "Updating..." in the Display
-  - If your display finishes updating you are finished with the display (TODO)
-
-### If you don't know which TFT variant you have:
-
-- Download the DisplayCombo.zip and the variant (ex. Sidewinder or GeniusPro)
-- Unzip both zips
-- In Display Combo you should see 3 folders starting with a corresponding number
-- Start with the first one and put the contents:
-  - Folder:TFT28
-  - config.ini
-  - mkstft28.bin
-- One Variant can contain these files:
-  - Folder:mks_font
-  - Folder:mks_pic
-  - Folder:TFT28
+- Wenn Sie das neueste TFT haben:
+  - Ordner:mks_font
+  - Ordner:mks_pic
+  - Ordner:TFT28
   - config.ini
   - mks_config.txt
   - mkstft28.bin
   - mkstft28evo.bin
-- on a SD-Card which is Formatted with Fat32
-- If the display updates and you can see "Updating..." in the Display
-  - Then you know which TFT variant you have and you should note it down or remember it!!!
-- If the display boots straight to the Display menu you need to try the same process with another folder
-- If you tested all 4 variants and it still din't work reach out here to get help [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
+- Kopieren Sie dann diese Dateien und Ordner auf eine SD-Karte, die Fat32-formatiert ist
+- Stecken Sie die SD-Karte in Ihren 3D-Drucker
+- Wenn der Drucker online ist
+  - Drücken Sie die Reset-Taste neben dem Display
+- Wenn der Drucker offline ist
+  - Drucker einschalten
+- Auf dem Display sollte "Updating..." angezeigt werden
+  - Wenn Ihre Anzeige die Aktualisierung beendet hat, sind Sie mit der Anzeige fertig (TODO)
+
+### Wenn Sie nicht wissen, welche TFT-Variante Sie haben:
+
+- Laden Sie die DisplayCombo.zip und die Variante herunter (ex. Sidewinder oder GeniusPro)
+- Entpacken Sie beide Zip Dateien
+- In Display Combo sollten Sie 3 Ordner sehen, die mit einer entsprechenden Nummer beginnen
+- Beginnen Sie mit dem ersten und geben Sie den Inhalt ein:
+  - Ordner:TFT28
+  - config.ini
+  - mkstft28.bin
+- Eine Variante kann diese Dateien enthalten:
+  - Ordner:mks_font
+  - Ordner:mks_pic
+  - Ordner:TFT28
+  - config.ini
+  - mks_config.txt
+  - mkstft28.bin
+  - mkstft28evo.bin
+- auf einer mit Fat32 formatierten SD-Karte
+- Wenn das Display aktualisiert wird und Sie „Updating...“ im Display sehen können
+  - Dann weißt du welche TFT-Variante du hast und solltest sie dir notieren bzw. merken!!!
+- Wenn das Display direkt in das Display-Menü startet, müssen Sie den gleichen Vorgang mit einem anderen Ordner versuchen
+- Wenn Sie alle 4 Varianten getestet haben und es immer noch nicht funktioniert, wenden Sie sich an hier, um Hilfe zu erhalten [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
 ---
 ## Marlin
-- Install the STM32CubeProgrammer software and open it
-- Connect your 3d Printer to your PC
-- Now you need to send M997 to the printer
-- The easiest way ist to use the display, but you can use also pronterface or octoprint
-  - GoTO: "Menu" --> "Terminal"
-  - Enter: "M997"
-- Switch to your PC
-- In STM32CubeProgrammer from the dropdown "USB" (image 1)
-- Then click on the refresh button (image 2)
-- Then click on connect (image 3)
-- Then click on "Download" Button (image 4)
-- check the verify programming check box is checked(image 5)
-- Then select with browse the firmware in the marlin folder (the extracted folder from the downloaded zip) (image 6)
-- Then hit "Start Programming" (image 7)
-- And wait till you get 2 dialog boxes (image 8)
-- Finally disconnect the printer and turn it off!
-- If something went wrong reach out here [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
+- Installieren Sie die STM32CubeProgrammer-Software und öffnen Sie sie
+- Verbinden Sie Ihren 3D-Drucker mit Ihrem PC
+- Jetzt müssen Sie M997 an den Drucker senden
+- Am einfachsten ist es, das Display zu verwenden, aber Sie können auch Pronterface oder Octoprint verwenden
+  - Gehe zu: "Menu" --> "Terminal"
+  - Eingeben: "M997"
+- Wechseln Sie zu Ihrem PC
+- In STM32CubeProgrammer aus dem Dropdown "USB"(image 1)
+- Klicken Sie dann auf die Schaltfläche Aktualisieren (image 2)
+- Klicken Sie dann auf Verbinden (image 3)
+- Klicken Sie dann auf die Schaltfläche "Download". (image 4)
+- Überprüfen Sie, ob das Kontrollkästchen Programmierung überprüfen aktiviert ist (image 5)
+- Wählen Sie dann mit durchsuchen die Firmware im Marlin-Ordner (der extrahierte Ordner aus dem heruntergeladenen Zip)
+- Dann zuschlagen "Start Programming" (image 7)
+- Und warten Sie, bis Sie 2 Dialogfelder erhalten (image 8)
+- Trennen Sie schließlich den Drucker und schalten Sie ihn aus!
+- Wenn etwas schief gelaufen ist, melden Sie sich hier [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
-## Congratulations you are all set :)
+## Herzlichen Glückwunsch, Sie sind fertig :)
 
 ## Images
 
