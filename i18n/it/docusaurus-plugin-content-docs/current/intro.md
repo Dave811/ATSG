@@ -16,6 +16,6 @@ Perciò dopo i diverosi ringraziamenti, vogliamo offrirvi un punto di riferiment
 **IMPORTANTE!!! QUESTA MODIFICA LA FATE A VOSTRO RISCHIO E PERICOLO, I GESTORI DEL SITO, GLI SVILUPPATORI ED I COLLABORATORI NON RISPONDERANNO IN ALCUNA MANIERA AD EVENTUALI DANNI CHE LA VOSTRA STAMPANTE DOVESSE RIPORTARE!!!**
 
 
-Puoi trovare [pagina di download](downloads.mdx) e la [pagina di installazione](installation.md) nel sito.
+Puoi trovare [pagina di download](./downloads) e la  [pagina di installazione](./installation) nel sito
 
 Prossimamente troverai una guida al post installazione di Marlin

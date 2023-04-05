@@ -1,9 +1,11 @@
 ---
 layout: home
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Ringraziamenti
+## Website
+- Riccardo Bramati for translating the website, and filling it with more content
 ## Marlin
 - [MarlinFirmware and their dev team](https://marlinfw.org/) per aver fornito un grande firmware
   - [SRC](https://github.com/MarlinFirmware/Marlin)
