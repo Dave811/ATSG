@@ -87,8 +87,8 @@ sidebar_position: 3
 - ¡Finalmente desconecte la impresora y apáguela!
 - Si algo salió mal, comuníquese aquí [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
-## Felicitaciones, ya está todo listo :)
-
+## Post installation
+Go to the [post installation](post-install.md) page and continue there!
 ## Images
 
 ![printer01](pathname://assets/installation/STM32/printer01.png) ![printer02](pathname://assets/installation/STM32/printer02.png) ![printer03](pathname://assets/installation/STM32/printer03.png) ![printer04](pathname://assets/installation/STM32/printer04.png) ![printer05](pathname://assets/installation/STM32/printer05.png) ![printer06](pathname://assets/installation/STM32/printer06.png) ![printer07](pathname://assets/installation/STM32/printer07.png) ![printer08](pathname://assets/installation/STM32/printer08.png)
