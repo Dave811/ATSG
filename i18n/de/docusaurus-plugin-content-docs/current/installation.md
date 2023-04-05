@@ -1,20 +1,20 @@
 ---
-layout: home
+layout: haus
 sidebar_position: 3
 ---
 
 # Installation
-## Requirements
-- For now an:
-  - Artillery SidewinderX1/2 with Bed level sensor
-  - Artillery Genius(Pro) with Bed level sensor
-- SD-Card
-  - Fat32 formatted
-  - The SD-Card should work if you can see the content from the SD-Card in your 3d Printer, so the best option is to go to (TODO) Print -> switch from USB to SD if needed -> open the SD-Card -> you should see files
-    - if not then you need to reformat the SD-Card or try a new one!
+## Anforderungen
+- Vorerst ein:
+  - Artillery SidewinderX1/2 mit Bettniveausensor
+  - Artillery Genius(Pro) mit Bettniveausensor
+- SD-Karte
+  - Fat32 formatiert
+  - Die SD-Karte sollte funktionieren, wenn Sie den Inhalt der SD-Karte in Ihrem 3D-Drucker sehen können, also gehen Sie am besten zu (TODO) Drucken -> Wechseln Sie bei Bedarf von USB auf SD -> Öffnen Sie die SD-Karte -> Sie sollten Dateien sehen
+    - Wenn nicht, müssen Sie die SD-Karte neu formatieren oder eine neue versuchen!
 - Computer
 
-## Prepare
+## Vorbereiten
 - Download the correct files from [Downloads](downloads.mdx)
   - For that use the filters above the table
   - If you don't know which Display(TFT) you have, download also the DisplayCombo.zip
