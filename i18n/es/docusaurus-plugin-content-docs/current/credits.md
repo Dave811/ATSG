@@ -1,9 +1,11 @@
 ---
 layout: home
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Créditos
+## Website
+- Riccardo Bramati for translating the website, and filling it with more content
 ## Marlin
 - [MarlinFirmware and their dev team](https://marlinfw.org/) por el firmware basico de la impesora
   - [SRC](https://github.com/MarlinFirmware/Marlin)
