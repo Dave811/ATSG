@@ -86,8 +86,8 @@ sidebar_position: 3
 - Finally disconnect the printer and turn it off!
 - If something went wrong reach out here [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
-## Congratulations you are all set :)
-
+## Post installation
+Go to the [post installation](post-install.md) page and continue there!
 ## Images
 
 ![printer01](pathname://assets/installation/STM32/printer01.png)

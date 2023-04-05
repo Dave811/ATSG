@@ -1,8 +1,10 @@
 ---
 layout: home
-sidebar_position: 4
+sidebar_position: 5
 ---
 # Credits
+## Website
+- Riccardo Bramati for translating the website, and filling it with more content
 ## Marlin
 - [MarlinFirmware and their dev team](https://marlinfw.org/) for providing the ground Printer firmware
   - [SRC](https://github.com/MarlinFirmware/Marlin)
