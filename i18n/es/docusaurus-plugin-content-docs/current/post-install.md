@@ -53,20 +53,20 @@ Después de eso, debe asegurarse de que todas las esquinas de su cama estén apr
 ¡Después de eso, debe hacer una 'Nivelación automática de la cama'!!
 - Esto se puede hacer a través de la pantalla:
 - `Menu` --> `Movement` --> `Bed level` --> `ABL`
-- Click `start`
-- After it finish you need to click `save`
+- Clic `start`
+- Después de que termine, debe hacer clic en `save`
 
-## First layer IMPORTANT
-This is essential, so the nozzle don't scratch the bed!!!
-- Go to this website https://teachingtechyt.github.io/calibration.html#firstlayer
-- Read through it and edit the settings on the page, download the gcode and put it on the USB
-- Start the print
-- click `babystep` --> adjust the `0.01mm` to `1mm`
-- Now you need to adjust the baby steps while it is printing!!!
-- It can be, that the nozzle scratches the surface, then you need to lift the nozzle with the baby steps!!!
-  - click `up` if it scratches
-- If the printer prints, you need to look at the printed part as described on the other website
-- adjust the `1mm` value to a smaller value to do the baby steps in small intervals
+## Primero layer es IMPORTANTE
+¡¡¡Esto es fundamental, para que la boquilla no arañe la cama!!!
+- Vaya a este sitio web https://teachingtechyt.github.io/calibration.html#firstlayer
+- Léalo y edite la configuración en la página, descargue el gcode y póngalo en el USB
+- Inicias la impresión
+- clic `babystep` --> ajustar el `0.01mm` a `1mm`
+- ¡Ahora necesita ajustar los baby step mientras se está imprimiendo!!!
+- Puede ser que la boquilla raye la superficie, ¡entonces debe levantar la boquilla con los pasos de bebé!!!
+  - clic `up` si se raya
+- Si la impresora imprime, debe mirar la parte impresa como se describe en el otro sitio web
+- ajusta el valor de `1 mm` a un valor más pequeño para hacer los pasos de bebé en intervalos pequeños
 - On the bottom of the website you find example images how the first layer should look like
 - Adjust the baby steps, so it looks `just right`
 - finally click: `save` --> `ok` to save the baby steps to the EEPROM
