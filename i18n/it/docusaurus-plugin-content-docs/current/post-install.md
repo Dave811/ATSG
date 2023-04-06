@@ -3,7 +3,7 @@ layout: home
 sidebar_position: 4
 ---
 
-# Post installation
+# Post installazioe
 
 In this page, you find some little tips and tricks that are needed to do after a fresh Marlin installation (every version).
 
