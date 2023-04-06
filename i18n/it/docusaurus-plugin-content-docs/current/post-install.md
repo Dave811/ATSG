@@ -61,17 +61,17 @@ Questo è importante affinché l'ugello non graffi il piatto!!!
 - Vsita il sito https://teachingtechyt.github.io/calibration.html#firstlayer
 - Leggilo bene e modifica i settaggi nella pagina, scarica il file col GCODE e mettilo in una chiavetta USB
 - Comincia a stampare
-- premi `babystep` --> sistemali gradualmente da `0.01mm` fino a `1mm`
-- Ora sistema coi babystep mentre sta lavorando!!!
-- Può accadere che l'ugello strisci la superficie del piatto, alzalo con o babystep!!!
+- premi `baby step` --> sistemali gradualmente da `0.01mm` fino a `1mm`
+- Ora sistema coi baby step mentre sta lavorando!!!
+- Può accadere che l'ugello strisci la superficie del piatto, alzalo con o baby step!!!
   - premi `up` se senti grattare
 - Se la stampa è avvenuta correttamente lo saprai confrontando la stampa con altre come descritto nel sito summenzionato
 - cambia il valore `1mm` con valori minori per avere aggiustamenti più precisi
 - Nella parte inferiore del sito troverai immagini di come deve apparire il primo layer
-- Sstema i babystep ffino a xhe non risulterà ` migliore `
-- finally click: `save` --> `ok` to save the baby steps to the EEPROM
+- Sstema i baby step ffino a xhe non risulterà ` migliore `
+- in fine premi `save` --> `ok` per salvare i baby step nella EEPROM
 
 
-Well done! Now you can start printing or tune the printer even more
+Ben fatto! Ora puoi cominciare a stampare o, se lo ritieni necessario sistemarla ancora meglio
 
-## Happy prints!
+## Buone stampe!
