@@ -67,11 +67,11 @@ Después de eso, debe asegurarse de que todas las esquinas de su cama estén apr
   - clic `up` si se raya
 - Si la impresora imprime, debe mirar la parte impresa como se describe en el otro sitio web
 - ajusta el valor de `1 mm` a un valor más pequeño para hacer los pasos de bebé en intervalos pequeños
-- On the bottom of the website you find example images how the first layer should look like
-- Adjust the baby steps, so it looks `just right`
-- finally click: `save` --> `ok` to save the baby steps to the EEPROM
+- En la parte inferior del sitio web, encontrará imágenes de ejemplo de cómo debería verse la primera capa
+- Ajusta los pequeños pasos para que se vea `bien`
+- finalmente haga clic en: `save` --> `ok` para guardar los pequeños pasos en la EEPROM
 
 
-Well done! Now you can start printing or tune the printer even more
+¡Bien hecho! Ahora puede comenzar a imprimir o ajustar la impresora aún más
 
-## Happy prints!
+## ¡Felices estampados!
