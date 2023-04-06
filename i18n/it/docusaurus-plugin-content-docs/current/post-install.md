@@ -5,38 +5,38 @@ sidebar_position: 4
 
 # Post installazioe
 
-In this page, you find some little tips and tricks that are needed to do after a fresh Marlin installation (every version).
+In questa pagina alcuni piccoli consigli post installazione del Marlin (qualsiasi versione).
 
 ---
 
-First, you need to know that the compiled Marlin have standard settings for the printer stored in the code base. These settings are mostly correct, for example the bed measurement or the BL-Touch offset to the nozzle. Other settings needed to be calibrated.
+Innanzitutto, devi sapere che il Marlin compilato ha impostazioni standard per la stampante memorizzate nel codice. Queste impostazioni sono per lo più corrette, ad esempio la misura del letto o l'offset del BL-Touch rispetto all'ugello. Altri settaggi necessitano di calibrazione.
 
-After you have installed the new Marlin version, you need to make a Factory restore with the command `M502`. This command erase all setting stored in EEPROM (The EEPROM stores the settings applied from the user and will be read when a print is happening) and load the settings which are stored in the compiled marlin version.
+Dopo aver installato la nuova versione del Marlin, occorre fare un "Factory Restore" con il comando `M502`. Questo commando cancella i settaggi salvati in EEPROM (l'EEPROM registra i valori impostati dall'utente che poi userà quando andremo a stampare) e carica i settaggi che sono stati impostati durante la confgurazione della nuova versione del Marlin.
 
-This command is needed, because sometimes when a new feature is implemented or changed, it is necessary to add the settings stored in the compiled Marlin version to the EEPROM.
+Questo commando è necessario in quanto, qualche volta, quando vengono implementate o cambiate nuove funzionalità, risulta necessario aggiungere i nuovi settaggi della nuova versione del Marlin nella EEPROM.
 
-Once you have reset the values, you will need to save the changes to the EEPROM. That is done with the `M500` command. **REMEMBER IT!!!** It will become useful when you change other setting later on.
+Una volta resettato i valori, t servirà salvare i cambiamenti nella EEPROM. Questo viene fatto attraverso il comando `M500`. **RICORDATELO!!!** ti ritirerà utile quando effettuerai altri cambiamenti in seguito.
 
 ## PID Autotune
-This is recommended, so that the temperature of the bed and the nozzle is stable
-- This can be done through the display:
+Questa procedura è raccomandata, così da rendere maggiormente stabili le temperature dell'ugello e del piatto
+- Questa si effettua dal display
 - `Menu` --> `Settings` --> `Machine` --> `Tuning` --> `Pid`
-- Make sure Nozzle is selected in the bottom left corner
-- Adjust the temperature to your printing temperature!!
-- click `start` --> `read it` --> click `ok`
-- wait
-- click `ok` to store the settings to EEPROM
+- Assicurati ce sia selezionato l'ugello nel angolo in basso a sinistra
+- Imposta come temperature quelle che userai in stampa!!
+- premi `start` --> `leggile` --> e premi `ok`
+- attendi
+- premi `ok` per salvate nlla EEPROM
 
-## Heat the bed and nozzle
-You need to heat the bed and nozzle for the calibration, because while you print the bed and the nozzle is also hot
+## Scalda il piatto e l'ugello
+Riscaldare il piatto e l'ugello è necessario in quanto durante le stampe sia il letto che l'ugello saranno caldi
 
-This needed to be done, so that you represent the same edge parameter.
-- `Menu` --> `Heat/Fan` --> `Preheat` --> make sure that `both` is selected --> `Select your desired profile`
-- After you finished the calibration:
+Questo è necessario farlo con gli stessi parametri che userai maggiormente in stampa.
+- `Menu` --> `Heat/Fan` --> `Preheat` --> assicuratiassicurati che `entramb` siano selezionti --> `Scegli il tuo profilo di stampa`
+- Dopo aver finito la całibrazione:
 - `Menu` --> `Heat/Fan` --> `Cool down`
 
-## Probe offset
-The first thing to do is the probe offset! This ensures, that the nozzle to the BL-TOUCH height offset is nearly correct
+## Probe offset (scostamento del sensore)
+Per prima cosa si deve effettuare il probe offset, cioè alzare un po' l'ugello dal piatto! This ensures, that the nozzle to the BL-TOUCH height offset is nearly correct
 - place a piece of paper under the nozzle **not the BL-TOUCH**
 - `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottom left corner button`
 - with the button `up` and `down` move the nozzle down or up until the piece of paper can be slide with very little friction
