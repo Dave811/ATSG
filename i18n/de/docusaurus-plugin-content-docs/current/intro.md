@@ -5,17 +5,17 @@ slug: /
 
 # Home
 
-After a lot of work, mainly done by **Gagipro**, **Ciotto** and **Fourmi**, the Community managed to port the Display firmware, originally conceived by BTT for their TFT with STM32 chip.
+Nach viel Arbeit, hauptsächlich erledigt von **Gagipro**, **Ciotto** und **Fourmi** ist es der Community gelungen, die ursprünglich von BTT für ihr TFT mit STM32-Chip konzipierte Display-Firmware zu portieren.
 
-Initially the distribution of the Artillery printers, for the Sidewinder X2 and Genius Pro models, took place with TFTs based on the same chip, therefore a new firmware could be installed, different from the one supplied by the parent company which made it easier for the user to set up. Towards the middle of last year the Display chip was replaced with a GD32, which made it impossible to replace the stock firmware with the BTT one until yesterday.
+Anfangs erfolgte der Vertrieb der Artillery-Drucker für die Modelle Sidewinder X2 und Genius Pro mit TFTs, die auf dem gleichen Chip basierten, daher konnte eine neue Firmware installiert werden, die sich von der von der Muttergesellschaft gelieferten unterscheidet, was die Arbeit erleichterte Benutzer einzurichten. Mitte letzten Jahres wurde der Display-Chip durch einen GD32 ersetzt, was es bis gestern unmöglich machte, die Stock-Firmware durch die BTT-Firmware zu ersetzen.
 
-As mentioned after many hours of work and the help of the community we can now replace the stock firmware of our printers with a more performing one which guarantees us, without the aid of external software, access to all the possibilities offered by the new Marlins, which the community is gradually compiling.
+Wie bereits erwähnt, können wir nach vielen Stunden Arbeit und der Hilfe der Community die Stock-Firmware unserer Drucker jetzt durch eine leistungsfähigere ersetzen, die uns ohne die Hilfe externer Software den Zugriff auf alle Möglichkeiten garantiert, die die neuen Marlins bieten. die die Community nach und nach zusammenstellt.
 
-Therefore, after many thanks, we want to offer you a point of reference for installing the new firmware for the display and also an ad hoc compiled Marlin 2.1.2.
+Daher möchten wir Ihnen nach vielen Dank einen Anhaltspunkt für die Installation der neuen Firmware für das Display und auch ein ad hoc kompiliertes Marlin 2.1.2 bieten.
 
-**IMPORTANT!!! YOU MAKE THIS MODIFICATION AT YOUR OWN RISK, THE SITE MANAGERS, DEVELOPERS AND CONTRIBUTORS WILL NOT BE RESPONSIBLE IN ANY WAY FOR ANY DAMAGES THAT YOUR PRINTER MAY SUFFER!!!**
+**WICHTIG!!! SIE FÜHREN DIESE ÄNDERUNG AUF IHR EIGENES RISIKO VOR, DIE VERWALTER DER WEBSITE, ENTWICKLER UND MITWIRKENDE SIND IN KEINER WEISE VERANTWORTLICH FÜR SCHÄDEN, DIE IHR DRUCKER ERLEIDEN KÖNNTE!!!**
 
 
-You can find the [download page](downloads.mdx) and the [installation page](installation.md) on the website.
+Auf der Website finden Sie die [Downloadseite](downloads.mdx) und die [Installationsseite](installation.md).
 
-Later on you will find calibration guides and after install steps.
+Später finden Sie Kalibrierungsanleitungen und Schritte nach der Installation.
