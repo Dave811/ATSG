@@ -36,39 +36,39 @@ Questo è necessario farlo con gli stessi parametri che userai maggiormente in s
 - `Menu` --> `Heat/Fan` --> `Cool down`
 
 ## Probe offset (scostamento del sensore)
-Per prima cosa si deve effettuare il probe offset, cioè alzare un po' l'ugello dal piatto! This ensures, that the nozzle to the BL-TOUCH height offset is nearly correct
-- place a piece of paper under the nozzle **not the BL-TOUCH**
-- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottom left corner button`
-- with the button `up` and `down` move the nozzle down or up until the piece of paper can be slide with very little friction
-- click `next` until you see `save` and click `save` and then `ok`
+Per prima cosa si deve effettuare il probe offset, cioè alzare un po' l'ugello dal piatto! Questo ci assicura appunto che l'ugello non sia ne troppo schiacciato ne troppo dstante
+- posiziona un foglio di carta sotto l'ugello **non il BL-TOUCH**
+- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottone inferiore sinisto `
+- col buttone `up` e `down` muovi s e giù l'ugello fino a che non sentirai una leggera frizione sul foglio di carta
+- premi `next` ffin che non leggi `save` premi `save` e `ok`
 
-## Bed Screws
-After that, you need to make sure that all the corners of your bed are roughly the same height to the nozzle.
-- This can be done through the display:
+## Livellamento manuale
+Una volta fatto quanto sopra, servirà eseguire il livellamento del piatto, ovvero verificare che i 4 angoli del piatto siano alla stessa distanza dall'ugello.
+- Anche questa procedura può essere eseguita dal display:
 - `Menu` --> `Movement` --> `Leveling`
-- Go through each point and slide a paper under the nozzle until all corners feel the same
-- When it doesn't feel the same, adjust the Screw of the corner
+- Eseguila per tutti i punti con il solito foglio di carta verificando che gli attriti nei 4 punti siano il più possibile uguali
+- Se senti differenze regola la vite sotto l'angolo in esame, esegui la procedura un paio di volte per una maggiore accuratezza
 
 ## Auto Bed Leveling
-After that, you need to do an 'Auto Bed Leveling'!!
-- This can be done through the display:
+Terminata la procedura precedente, lancia l'Auto Bed Leveling!!
+- Ancora una volta attraverso il display:
 - `Menu` --> `Movement` --> `Bed level` --> `ABL`
-- Click `start`
-- After it finish you need to click `save`
+- Premi `start`
+- Termanato il ciclo di misurazione `save`
 
-## First layer IMPORTANT
-This is essential, so the nozzle don't scratch the bed!!!
-- Go to this website https://teachingtechyt.github.io/calibration.html#firstlayer
-- Read through it and edit the settings on the page, download the gcode and put it on the USB
-- Start the print
-- click `babystep` --> adjust the `0.01mm` to `1mm`
-- Now you need to adjust the baby steps while it is printing!!!
-- It can be, that the nozzle scratches the surface, then you need to lift the nozzle with the baby steps!!!
-  - click `up` if it scratches
-- If the printer prints, you need to look at the printed part as described on the other website
-- adjust the `1mm` value to a smaller value to do the baby steps in small intervals
-- On the bottom of the website you find example images how the first layer should look like
-- Adjust the baby steps, so it looks `just right`
+## Il primo layer è IMPORTANTE
+Questo è importante affinché l'ugello non graffi il piatto!!!
+- Vsita il sito https://teachingtechyt.github.io/calibration.html#firstlayer
+- Leggilo bene e modifica i settaggi nella pagina, scarica il file col GCODE e mettilo in una chiavetta USB
+- Comincia a stampare
+- premi `babystep` --> sistemali gradualmente da `0.01mm` fino a `1mm`
+- Ora sistema coi babystep mentre sta lavorando!!!
+- Può accadere che l'ugello strisci la superficie del piatto, alzalo con o babystep!!!
+  - premi `up` se senti grattare
+- Se la stampa è avvenuta correttamente lo saprai confrontando la stampa con altre come descritto nel sito summenzionato
+- cambia il valore `1mm` con valori minori per avere aggiustamenti più precisi
+- Nella parte inferiore del sito troverai immagini di come deve apparire il primo layer
+- Sstema i babystep ffino a xhe non risulterà ` migliore `
 - finally click: `save` --> `ok` to save the baby steps to the EEPROM
 
 
