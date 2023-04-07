@@ -1,9 +1,9 @@
 ---
-layout: home
+layout: principale
 sidebar_position: 4
 ---
 
-# Post installazioe
+# Post installazione
 
 In questa pagina alcuni piccoli consigli post installazione del Marlin (qualsiasi versione).
 
