@@ -3,75 +3,75 @@ layout: home
 sidebar_position: 4
 ---
 
-# Post installation
+# Posterior a la instalación
 
-In this page, you find some little tips and tricks that are needed to do after a fresh Marlin installation (every version).
+En esta página, encontrará algunos pequeños consejos y trucos necesarios después de una instalación nueva de Marlin (todas las versiones).
 
 ---
 
-First, you need to know that the compiled Marlin have standard settings for the printer stored in the code base. These settings are mostly correct, for example the bed measurement or the BL-Touch offset to the nozzle. Other settings needed to be calibrated.
+Primero, debe saber que el Marlin compilado tiene una configuración estándar para la impresora almacenada en el código base. Estos ajustes son en su mayoría correctos, por ejemplo, la medida del lecho o el desplazamiento del BL-Touch con respecto a la boquilla. Era necesario calibrar otros ajustes.
 
-After you have installed the new Marlin version, you need to make a Factory restore with the command `M502`. This command erase all setting stored in EEPROM (The EEPROM stores the settings applied from the user and will be read when a print is happening) and load the settings which are stored in the compiled marlin version.
+Después de haber instalado la nueva versión de Marlin, debe realizar una restauración de fábrica con el comando `M502`. Este comando borra todas las configuraciones almacenadas en EEPROM (La EEPROM almacena las configuraciones aplicadas por el usuario y se leerán cuando se realice una impresión) y cargue las configuraciones que están almacenadas en la versión compilada de Marlin.
 
-This command is needed, because sometimes when a new feature is implemented or changed, it is necessary to add the settings stored in the compiled Marlin version to the EEPROM.
+Este comando es necesario porque, a veces, cuando se implementa o cambia una nueva característica, es necesario agregar la configuración almacenada en la versión compilada de Marlin a la EEPROM.
 
-Once you have reset the values, you will need to save the changes to the EEPROM. That is done with the `M500` command. **REMEMBER IT!!!** It will become useful when you change other setting later on.
+Una vez que haya restablecido los valores, deberá guardar los cambios en la EEPROM. Eso se hace con el comando `M500`. **¡¡RECUERDALO!! De** Será útil cuando cambie otra configuración más adelante.
 
 ## PID Autotune
-This is recommended, so that the temperature of the bed and the nozzle is stable
-- This can be done through the display:
+Esto se recomienda para que la temperatura de la cama y la boquilla sea estable
+- Esto se puede hacer a través de la pantalla:
 - `Menu` --> `Settings` --> `Machine` --> `Tuning` --> `Pid`
-- Make sure Nozzle is selected in the bottom left corner
-- Adjust the temperature to your printing temperature!!
-- click `start` --> `read it` --> click `ok`
-- wait
-- click `ok` to store the settings to EEPROM
+- Asegúrese de que boquilla esté seleccionada en la esquina inferior izquierda
+- ¡Ajusta la temperatura a tu temperatura de impresión!!
+- click `start` --> ` léelo ` --> click `ok`
+- espera
+- click `ok` para almacenar la configuración en EEPROM
 
-## Heat the bed and nozzle
-You need to heat the bed and nozzle for the calibration, because while you print the bed and the nozzle is also hot
+## Calentar la cama y la boquilla
+Debe calentar la cama y la boquilla para la calibración, porque mientras imprime, la cama y la boquilla también están calientes
 
-This needed to be done, so that you represent the same edge parameter.
-- `Menu` --> `Heat/Fan` --> `Preheat` --> make sure that `both` is selected --> `Select your desired profile`
-- After you finished the calibration:
+Esto debía hacerse, de modo que represente el mismo parámetro de borde.
+- `Menu` --> `Heat/Fan` --> `Preheat` --> asegura que `ambos` --> es seleccionado ` seleccione su perfil deseado `
+- Después de terminar la calibración:
 - `Menu` --> `Heat/Fan` --> `Cool down`
 
-## Probe offset
-The first thing to do is the probe offset! This ensures, that the nozzle to the BL-TOUCH height offset is nearly correct
-- place a piece of paper under the nozzle **not the BL-TOUCH**
-- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottom left corner button`
-- with the button `up` and `down` move the nozzle down or up until the piece of paper can be slide with very little friction
-- click `next` until you see `save` and click `save` and then `ok`
+## Probe offset (Compensación de sonda)
+¡Lo primero que debe hacer es el desplazamiento de la sonda! Esto asegura que la desviación de la altura de la boquilla al BL-TOUCH sea casi correcta
+- coloque un trozo de papel debajo de la boquilla **no el BL-TOUCH**
+- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `botón de la esquina inferior izquierda`
+- con el botón `up` y `down` mueva la boquilla hacia abajo o hacia arriba hasta que la hoja de papel pueda deslizarse con muy poca fricción
+- haz clic en `next/code> hasta que veas <code>save` y haz clic en `save` y luego `ok`
 
-## Bed Screws
-After that, you need to make sure that all the corners of your bed are roughly the same height to the nozzle.
-- This can be done through the display:
+## Bed Screws (nivelación manual)
+Después de eso, debe asegurarse de que todas las esquinas de su cama estén aproximadamente a la misma altura que la boquilla.
+- Esto se puede hacer a través de la pantalla:
 - `Menu` --> `Movement` --> `Leveling`
-- Go through each point and slide a paper under the nozzle until all corners feel the same
-- When it doesn't feel the same, adjust the Screw of the corner
+- Pase por cada punto y deslice un papel debajo de la boquilla hasta que todas las esquinas se sientan iguales
+- Cuando no sienta lo mismo, ajuste el Tornillo de la esquina
 
-## Auto Bed Leveling
-After that, you need to do an 'Auto Bed Leveling'!!
-- This can be done through the display:
+## Auto Bed Leveling (Nivelación automática de la cama)
+¡Después de eso, debe hacer una 'Nivelación automática de la cama'!!
+- Esto se puede hacer a través de la pantalla:
 - `Menu` --> `Movement` --> `Bed level` --> `ABL`
-- Click `start`
-- After it finish you need to click `save`
+- Clic `start`
+- Después de que termine, debe hacer clic en `save`
 
-## First layer IMPORTANT
-This is essential, so the nozzle don't scratch the bed!!!
-- Go to this website https://teachingtechyt.github.io/calibration.html#firstlayer
-- Read through it and edit the settings on the page, download the gcode and put it on the USB
-- Start the print
-- click `babystep` --> adjust the `0.01mm` to `1mm`
-- Now you need to adjust the baby steps while it is printing!!!
-- It can be, that the nozzle scratches the surface, then you need to lift the nozzle with the baby steps!!!
-  - click `up` if it scratches
-- If the printer prints, you need to look at the printed part as described on the other website
-- adjust the `1mm` value to a smaller value to do the baby steps in small intervals
-- On the bottom of the website you find example images how the first layer should look like
-- Adjust the baby steps, so it looks `just right`
-- finally click: `save` --> `ok` to save the baby steps to the EEPROM
+## Primero layer es IMPORTANTE
+¡¡¡Esto es fundamental, para que la boquilla no arañe la cama!!!
+- Vaya a este sitio web https://teachingtechyt.github.io/calibration.html#firstlayer
+- Léalo y edite la configuración en la página, descargue el gcode y póngalo en el USB
+- Inicias la impresión
+- clic `babystep` --> ajustar el `0.01mm` a `1mm`
+- ¡Ahora necesita ajustar los baby step mientras se está imprimiendo!!!
+- Puede ser que la boquilla raye la superficie, ¡entonces debe levantar la boquilla con los pasos de bebé!!!
+  - clic `up` si se raya
+- Si la impresora imprime, debe mirar la parte impresa como se describe en el otro sitio web
+- ajusta el valor de `1 mm` a un valor más pequeño para hacer los pasos de bebé en intervalos pequeños
+- En la parte inferior del sitio web, encontrará imágenes de ejemplo de cómo debería verse la primera capa
+- Ajusta los pequeños pasos para que se vea `bien`
+- finalmente haga clic en: `save` --> `ok` para guardar los pequeños pasos en la EEPROM
 
 
-Well done! Now you can start printing or tune the printer even more
+¡Bien hecho! Ahora puede comenzar a imprimir o ajustar la impresora aún más
 
-## Happy prints!
+## ¡Felices estampados!

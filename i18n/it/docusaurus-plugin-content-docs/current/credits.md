@@ -4,8 +4,8 @@ sidebar_position: 5
 ---
 
 # Ringraziamenti
-## Website
-- Riccardo Bramati for translating the website, and filling it with more content
+## Pagine web
+- Riccardo Bramati per la traduzione del sito e per alcuni contenuti
 ## Marlin
 - [MarlinFirmware and their dev team](https://marlinfw.org/) per aver fornito un grande firmware
   - [SRC](https://github.com/MarlinFirmware/Marlin)

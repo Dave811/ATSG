@@ -4,10 +4,10 @@ sidebar_position: 5
 ---
 
 # Kredite
-## Website
+## Webseite
 - Riccardo Bramati for translating the website, and filling it with more content
 ## Marlin
-- [MarlinFirmware and their dev team](https://marlinfw.org/) für die Bereitstellung der Bodendrucker-Firmware
+- [MarlinFirmware und ihr Entwicklerteam](https://marlinfw.org/) für die Bereitstellung der Bodendrucker-Firmware
   - [SRC](https://github.com/MarlinFirmware/Marlin)
 - [freakyDude](https://blog.freakydu.de/)zum Ändern der Konfigurationen für Marlin
   - [SRC](https://github.com/freakydude/Marlin)

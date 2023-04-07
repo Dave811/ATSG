@@ -10,7 +10,7 @@ sidebar_position: 3
   - Artilllery Genius o Genius Pro con sensore di livellamento del piatto
 - SD-Card
   - Formattala a FAT32 (formato di Windows)
-  - Se la SD-Card funzionerà, dovresti essere in grado di leggerne il contenuto (se non è vuota) direttamente dalla stampante. Per poter leggere la SD-Card devi andare neldisplay della stampante e selezionare, dall'apposito menù, la voce Micro SD, se vedrai dei file,significherà che il formato è quello giusto.
+  - Se la SD-Card funzionerà, dovresti essere in grado di leggerne il contenuto (se non vuota) direttamente dalla stampante. Per poter leggere la SD-Card devi andare nel display della stampante e selezionare, dall'apposito menù, la voce Micro SD, se vedrai dei files, significherà che il formato è quello giusto.
     - Altrimenti dovrai procedere a riformattare la SD-Card!
 - Computer
 
@@ -35,7 +35,7 @@ sidebar_position: 3
   - mks_config.txt
   - mkstft28.bin
   - mkstft28evo.bin
-- Ora copia i files e le cartelle, come da schema sopra, nella SD-Card formattata FAT3FAT32
+- Ora copia i files e le cartelle, come da schema sopra, nella SD-Card formattata FAT32
 - Inserisci la SD-Card nella stampante 3D
 - Se la stampante è accesa
   - premi il tastino reset che si trova a fianco del Display in basso a destra
@@ -76,7 +76,7 @@ sidebar_position: 3
   - Vai su "Menu" -> "Terminal"
   - Inserisci il codice "M997"
 - Cambia il programma sul tuo PC
-- usa STM32CubeProgrammer e dal menù a tendina scegi "USB" (immagine 1)
+- Usa STM32CubeProgrammer e dal menù a tendina scegli "USB" (immagine 1)
 - Quindi clicca il bottone di refresh (immagine 2)
 - Ciicca su "Connect" (immagne 3)
 - Ancora clicca sul bottone "Download" (immagine 4)
@@ -87,8 +87,8 @@ sidebar_position: 3
 - Infine sconnetti la stampante e spegnila
 - Se qualcosa va storto cerca aiuto qua: [New Issue](https://github.com/Dave811/ATSG/issues/new/choose)
 
-## Post installation
-Go to the [post installation](post-install.md) page and continue there!
+## Post installazione
+Vai alla pagina [post installation](post-install.md) per continuare!
 ## Immagini
 
 ![printer01](pathname://assets/installation/STM32/printer01.png) ![printer02](pathname://assets/installation/STM32/printer02.png) ![printer03](pathname://assets/installation/STM32/printer03.png) ![printer04](pathname://assets/installation/STM32/printer04.png) ![printer05](pathname://assets/installation/STM32/printer05.png) ![printer06](pathname://assets/installation/STM32/printer06.png) ![printer07](pathname://assets/installation/STM32/printer07.png) ![printer08](pathname://assets/installation/STM32/printer08.png)
