@@ -9,7 +9,7 @@ Nach viel Arbeit, hauptsächlich erledigt von **Gagipro**, **Ciotto** und **Four
 
 Anfangs erfolgte der Vertrieb der Artillery-Drucker für die Modelle Sidewinder X2 und Genius Pro mit TFTs, die auf dem gleichen Chip basierten, daher konnte eine neue Firmware installiert werden, die sich von der von der Muttergesellschaft gelieferten unterscheidet, was die Arbeit erleichterte Benutzer einzurichten. Mitte letzten Jahres wurde der Display-Chip durch einen GD32 ersetzt, was es bis gestern unmöglich machte, die Stock-Firmware durch die BTT-Firmware zu ersetzen.
 
-Wie bereits erwähnt, können wir nach vielen Stunden Arbeit und der Hilfe der Community die Stock-Firmware unserer Drucker jetzt durch eine leistungsfähigere ersetzen, die uns ohne die Hilfe externer Software den Zugriff auf alle Möglichkeiten garantiert, die die neuen Marlins bieten. die die Community nach und nach zusammenstellt.
+Wie bereits erwähnt, können wir nach vielen Stunden Arbeit und der Hilfe der Community die Stock-Firmware unserer Drucker jetzt durch eine leistungsfähigere ersetzen, die uns ohne die Hilfe externer Software den Zugriff auf alle Möglichkeiten garantiert, die die neuen Marlins bieten.
 
 Daher möchten wir Ihnen nach vielen Dank einen Anhaltspunkt für die Installation der neuen Firmware für das Display und auch ein ad hoc kompiliertes Marlin 2.1.2 bieten.
 
