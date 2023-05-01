@@ -12,27 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # ------------------- Prepare -------------------
-      # Clone the Marlin repo from freakydude
+      # Clone the Marlin repo from Dave811
       - name: Check out the PR
         uses: actions/checkout@v3
         with:
-          repository: freakydude/Marlin
-          # 17.10.2021 - 279a463b4088492d3a6b2b785609235e0ac7938d
-          ref: "279a463b4088492d3a6b2b785609235e0ac7938d"
-          path: freakydude-Marlin
+          repository: https://github.com/Dave811/Marlin-Artillery
+          # 01.05.2023 - ecfc42c705de5fb3fc103f16d6f22fc141dc90dd
+          ref: "ecfc42c705de5fb3fc103f16d6f22fc141dc90dd"
+          path: Marlin-Artillery
           token: ${{ secrets.DUMMY_TOKEN }}
       # Cache pip and PlatformIO
       - name: Cache pip
         uses: actions/cache@v3
         with:
-          path: freakydude-Marlin/.cache/pip
+          path: Marlin-Artillery/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Cache PlatformIO
         uses: actions/cache@v3
         with:
-          path: freakydude-Marlin/.platformio
+          path: Marlin-Artillery/.platformio
           key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
       # Install Python 3.7 and PlatformIO
       - name: Select Python 3.7
@@ -95,20 +95,20 @@ jobs:
       # Build the AT-SW-fil-lev-Marlin firmware
       - name: Build Artillery Ruby
         run: |
-          cd freakydude-Marlin
+          cd Marlin-Artillery
           platformio run --environment Artillery_Ruby
       # Move the firmware to the release folder
       - name: Move firmware to release folder
         run: |
           mkdir -p release/AT-SW-fil-lev/Marlin
-          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-SW-fil-lev/Marlin/firmware.bin
-          cp -r freakydude-Marlin/Marlin/Configuration.h release/AT-SW-fil-lev/Marlin/Configuration.h
-          cp -r freakydude-Marlin/Marlin/Configuration_adv.h release/AT-SW-fil-lev/Marlin/Configuration_adv.h
+          cp -r Marlin-Artillery/.pio/build/Artillery_Ruby/firmware.bin release/AT-SW-fil-lev/Marlin/firmware.bin
+          cp -r Marlin-Artillery/Marlin/Configuration.h release/AT-SW-fil-lev/Marlin/Configuration.h
+          cp -r Marlin-Artillery/Marlin/Configuration_adv.h release/AT-SW-fil-lev/Marlin/Configuration_adv.h
       # ------------------- AT-GP-fil-lev -------------------
       # change #define X_BED_SIZE and Y_BED_SIZE  to 220
       - name: Change X_BED_SIZE and Y_BED_SIZE from 300 to 220 in Configuration.h
         run: |
-          cd freakydude-Marlin
+          cd Marlin-Artillery
           sed -i 's/#define X_BED_SIZE 300/#define X_BED_SIZE 220/g' Marlin/Configuration.h
           sed -i 's/#define Y_BED_SIZE 300/#define Y_BED_SIZE 220/g' Marlin/Configuration.h
           sed -i 's/#define Z_MAX_POS 400/#define Z_MAX_POS 250/g' Marlin/Configuration.h
@@ -117,15 +117,15 @@ jobs:
       # Build the AT-GP-fil-lev-Marlin firmware
       - name: Build Artillery Ruby
         run: |
-          cd freakydude-Marlin
+          cd Marlin-Artillery
           platformio run --environment Artillery_Ruby
       # Move the firmware to the release folder
       - name: Move firmware to release folder
         run: |
           mkdir -p release/AT-GP-fil-lev/Marlin
-          cp -r freakydude-Marlin/.pio/build/Artillery_Ruby/firmware.bin release/AT-GP-fil-lev/Marlin/firmware.bin
-          cp -r freakydude-Marlin/Marlin/Configuration.h release/AT-GP-fil-lev/Marlin/Configuration.h
-          cp -r freakydude-Marlin/Marlin/Configuration_adv.h release/AT-GP-fil-lev/Marlin/Configuration_adv.h
+          cp -r Marlin-Artillery/.pio/build/Artillery_Ruby/firmware.bin release/AT-GP-fil-lev/Marlin/firmware.bin
+          cp -r Marlin-Artillery/Marlin/Configuration.h release/AT-GP-fil-lev/Marlin/Configuration.h
+          cp -r Marlin-Artillery/Marlin/Configuration_adv.h release/AT-GP-fil-lev/Marlin/Configuration_adv.h
       # TODO add other Marlin configs and firmware
       # ------------------- Build Display -------------------
       # ------------------- AT-SW-fil-lev -------------------
