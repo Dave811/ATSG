@@ -16,7 +16,7 @@ jobs:
       - name: Check out the PR
         uses: actions/checkout@v3
         with:
-          repository: https://github.com/Dave811/Marlin-Artillery
+          repository: Dave811/Marlin-Artillery
           # 01.05.2023 - ecfc42c705de5fb3fc103f16d6f22fc141dc90dd
           ref: "ecfc42c705de5fb3fc103f16d6f22fc141dc90dd"
           path: Marlin-Artillery
