@@ -23,7 +23,7 @@ Esto se recomienda para que la temperatura de la cama y la boquilla sea estable
 - `Menu` --> `Settings` --> `Machine` --> `Tuning` --> `Pid`
 - Asegúrese de que boquilla esté seleccionada en la esquina inferior izquierda
 - ¡Ajusta la temperatura a tu temperatura de impresión!!
-- click `start` --> ` léelo ` --> click `ok`
+- click `start` --> `léelo` --> click `ok`
 - espera
 - click `ok` para almacenar la configuración en EEPROM
 
@@ -31,7 +31,7 @@ Esto se recomienda para que la temperatura de la cama y la boquilla sea estable
 Debe calentar la cama y la boquilla para la calibración, porque mientras imprime, la cama y la boquilla también están calientes
 
 Esto debía hacerse, de modo que represente el mismo parámetro de borde.
-- `Menu` --> `Heat/Fan` --> `Preheat` --> asegura que `ambos` --> es seleccionado ` seleccione su perfil deseado `
+- `Menu` --> `Heat/Fan` --> `Preheat` --> asegura que `ambos` --> es seleccionado `seleccione su perfil deseado`
 - Después de terminar la calibración:
 - `Menu` --> `Heat/Fan` --> `Cool down`
 

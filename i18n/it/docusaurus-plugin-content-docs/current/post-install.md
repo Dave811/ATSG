@@ -38,7 +38,7 @@ Questo è necessario farlo con gli stessi parametri che userai maggiormente in s
 ## Probe offset (scostamento del sensore)
 Per prima cosa si deve effettuare il probe offset, cioè alzare un po' l'ugello dal piatto! Questo ci assicura appunto che l'ugello non sia ne troppo schiacciato ne troppo dstante
 - posiziona un foglio di carta sotto l'ugello **non il BL-TOUCH**
-- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottone inferiore sinisto `
+- `Menu` --> `Movement` --> `Bed level` --> `P offset` --> `bottone inferiore sinisto`
 - Col bottone `up` e `down` muovi s e giù l'ugello fino a che non sentirai una leggera frizione sul foglio di carta
 - premi `next` fino che non leggi `save` premi `save` e `ok`
 
@@ -68,7 +68,7 @@ Questo è importante affinché l'ugello non graffi il piatto!!!
 - Se la stampa è avvenuta correttamente lo saprai confrontando la stampa con altre come descritto nel sito summenzionato
 - cambia il valore `1mm` con valori minori per avere aggiustamenti più precisi
 - Nella parte inferiore del sito troverai immagini di come deve apparire il primo layer
-- Sstema i baby step fino a che non risulterà ` migliore `
+- Sstema i baby step fino a che non risulterà `migliore`
 - in fine premi `save` --> `ok` per salvare i baby step nella EEPROM
 
 
